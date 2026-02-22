@@ -1,0 +1,14 @@
+{
+  "name": "ticketlive-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "watch": "sass assets/scss/style.scss assets/css/style.css --watch",
+     "build": "del assets\\css\\style.css.map 2>nul & sass assets/scss/style.scss assets/css/style.css --style=compressed --no-source-map"
+  },
+  "author": "ticketlive.cz",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.94.2"
+  }
+}
