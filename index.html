@@ -46,36 +46,43 @@
             <p>Inzertní portál s ověřenými chovateli psů a koček.</p>
 
             <form class="search-bar" action="#" method="get">
-              <label class="search-bar__field">
-                <span class="search-bar__label">Plemeno</span>
-                <select>
-                  <option>Vyberte</option>
-                </select>
-              </label>
+              <div class="search-bar__primary">
+                <label class="search-bar__field search-bar__field--search">
+                  <input class="search-bar__input" type="text" name="q" placeholder="Plemeno, rasa, město nebo chovatel">
+                  <span class="search-bar__icon">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M10.5 3a7.5 7.5 0 1 0 4.7 13.3l4.2 4.2 1.6-1.6-4.2-4.2A7.5 7.5 0 0 0 10.5 3zm0 2.2a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6z"/>
+                    </svg>
+                  </span>
+                </label>
 
-              <label class="search-bar__field">
-                <span class="search-bar__label">Lokalita</span>
-                <select>
-                  <option>Celá ČR</option>
-                </select>
-              </label>
-
-              <div class="search-bar__field search-bar__field--icon" aria-hidden="true">
-                <span class="search-bar__icon">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M10.5 3a7.5 7.5 0 1 0 4.7 13.3l4.2 4.2 1.6-1.6-4.2-4.2A7.5 7.5 0 0 0 10.5 3zm0 2.2a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6z"/>
-                  </svg>
-                </span>
+                <button class="button button--primary" type="submit">Hledat</button>
               </div>
 
-              <button class="button button--primary" type="submit">Hledat</button>
+              <div class="search-bar__filters">
+                <label class="search-bar__field">
+                  <span class="search-bar__label">Plemeno</span>
+                  <select>
+                    <option>Vyberte</option>
+                  </select>
+                </label>
+
+                <label class="search-bar__field">
+                  <span class="search-bar__label">Lokalita</span>
+                  <select>
+                    <option>Celá ČR</option>
+                  </select>
+                </label>
+              </div>
             </form>
           </div>
           <div class="hero__marketplace" aria-hidden="true">
             <div class="hero__market-card hero__market-card--back"></div>
             <div class="hero__market-card hero__market-card--front">
-              <div class="hero__market-thumb"></div>
               <div class="hero__market-lines">
+                <span></span>
+                <span></span>
+                <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -95,13 +102,13 @@
           <div class="pet-grid">
             <a class="pet-card" href="#">
               <div class="pet-card__image">
-                <img class="pet-card__photo" src="images/hero-puppy.png" alt="Beagle štěňata">
+                <img class="pet-card__photo" src="images/dog-pointer.jpg" alt="Ohař">
               </div>
               <div class="pet-card__body">
-                <h3>Beagle štěňata</h3>
+                <h3>Německý dlouhosrstý ohař</h3>
                 <div class="pet-card__meta">
                   <span>Praha</span>
-                  <strong>8 000 Kč</strong>
+                  <strong>14 000 Kč</strong>
                 </div>
               </div>
               <div class="pet-card__footer">
@@ -112,11 +119,11 @@
 
             <a class="pet-card" href="#">
               <div class="pet-card__image">
-                <img class="pet-card__photo" src="images/hero-puppy.png" alt="Zlatý retrívr">
+                <img class="pet-card__photo" src="images/dog-keeshond.jpg" alt="Keeshond">
                 <span class="pet-card__badge">Ověřený chovatel</span>
               </div>
               <div class="pet-card__body">
-                <h3>Zlatý retrívr</h3>
+                <h3>Keeshond</h3>
                 <div class="pet-card__meta">
                   <span>Brno</span>
                   <strong>10 000 Kč</strong>
@@ -130,10 +137,10 @@
 
             <a class="pet-card" href="#">
               <div class="pet-card__image">
-                <img class="pet-card__photo" src="images/hero-puppy.png" alt="Francouzský buldoček">
+                <img class="pet-card__photo" src="images/dog-boston-terrier.jpg" alt="Boston teriér">
               </div>
               <div class="pet-card__body">
-                <h3>Francouzský buldoček</h3>
+                <h3>Boston teriér</h3>
                 <div class="pet-card__meta">
                   <span>Ostrava</span>
                   <strong>12 500 Kč</strong>
@@ -147,13 +154,13 @@
 
             <a class="pet-card" href="#">
               <div class="pet-card__image">
-                <img class="pet-card__photo" src="images/hero-puppy.png" alt="Labrador štěně">
+                <img class="pet-card__photo" src="images/dog-yorkshire-terrier.jpg" alt="Yorkshire teriér">
               </div>
               <div class="pet-card__body">
-                <h3>Labrador štěně</h3>
+                <h3>Yorkshire teriér</h3>
                 <div class="pet-card__meta">
                   <span>Plzeň</span>
-                  <strong>11 500 Kč</strong>
+                  <strong>9 500 Kč</strong>
                 </div>
               </div>
               <div class="pet-card__footer">

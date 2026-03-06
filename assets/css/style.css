@@ -39,7 +39,7 @@ select {
 }
 
 .container {
-  width: min(1240px, 100% - 48px);
+  width: min(1320px, 100% - 48px);
   margin: 0 auto;
 }
 
@@ -55,6 +55,7 @@ select {
   padding: 0 22px;
   border-radius: 14px;
   border: 0;
+  cursor: pointer;
   font-weight: 800;
   font-family: "DM Sans", sans-serif;
   font-size: 1rem;
@@ -68,7 +69,13 @@ select {
 .button--primary {
   background: linear-gradient(180deg, #e67c3b 0%, #d9662b 100%);
   color: #fff7f2;
-  box-shadow: 0 12px 24px rgba(217, 102, 43, 0.26);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+  transition-property: box-shadow, transform;
+  transition-duration: 0.22s;
+  transition-timing-function: ease;
+}
+.button--primary:hover {
+  box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.34);
 }
 
 .button--ghost {
@@ -104,11 +111,11 @@ select {
   left: 0;
   right: 0;
   z-index: 20;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.025), transparent 28%), radial-gradient(circle at 75% 10%, rgba(255, 255, 255, 0.015), transparent 18%), linear-gradient(135deg, rgba(76, 17, 27, 0.985) 0%, rgba(103, 22, 35, 0.98) 48%, rgba(67, 14, 24, 0.985) 100%);
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.018), transparent 28%), radial-gradient(circle at 75% 10%, rgba(255, 255, 255, 0.01), transparent 18%), linear-gradient(135deg, rgba(67, 12, 24, 0.95) 0%, rgba(83, 15, 26, 0.95) 48%, rgba(98, 18, 33, 0.92) 100%);
   color: #fff7f2;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 10px 28px rgba(48, 10, 17, 0.28);
+  box-shadow: 0 10px 28px rgba(33, 6, 12, 0.34);
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
@@ -202,15 +209,16 @@ select {
 
 .hero__inner {
   position: relative;
-  display: block;
-  min-height: 640px;
+  display: flex;
+  align-items: center;
+  min-height: 680px;
 }
 
 .hero__content {
   position: relative;
   z-index: 2;
   max-width: 560px;
-  padding: 104px 0 112px;
+  padding: 32px 0;
 }
 .hero__content h1 {
   margin: 0 0 20px;
@@ -232,14 +240,14 @@ select {
   position: absolute;
   left: 8px;
   bottom: -24px;
-  width: 108px;
-  height: 86px;
+  width: 82px;
+  height: 66px;
   z-index: 4;
 }
 
 .hero__market-card {
   position: absolute;
-  border-radius: 24px;
+  border-radius: 16px;
   background: rgba(255, 250, 246, 0.86);
   border: 1px solid rgba(255, 247, 242, 0.84);
   box-shadow: 0 24px 50px rgba(76, 33, 24, 0.16);
@@ -248,106 +256,116 @@ select {
 }
 
 .hero__market-card--back {
-  inset: 10px 14px 0 0;
+  inset: 8px 11px 0 0;
   background: rgba(246, 232, 223, 0.54);
   transform: rotate(-5deg);
 }
 
 .hero__market-card--front {
-  inset: 0 7px 5px 0;
-  padding: 8px;
+  inset: 0 5px 4px 0;
+  padding: 6px;
   transform: rotate(-1deg);
-}
-
-.hero__market-thumb {
-  position: relative;
-  height: 28px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, rgba(237, 149, 88, 0.98) 0%, rgba(220, 89, 46, 0.98) 100%);
-}
-
-.hero__market-thumb::before,
-.hero__market-thumb::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.92);
-  transform: translateY(-50%);
-}
-
-.hero__market-thumb::before {
-  left: 32%;
-  width: 12px;
-  height: 12px;
-}
-
-.hero__market-thumb::after {
-  left: 57%;
 }
 
 .hero__market-lines {
   display: grid;
   gap: 3px;
-  margin-top: 6px;
+  margin-top: 4px;
+  padding: 5px 3px 0;
 }
 
 .hero__market-lines span {
   display: block;
-  height: 3px;
+  height: 2px;
   border-radius: 999px;
   background: rgba(122, 29, 43, 0.14);
 }
 
 .hero__market-lines span:nth-child(1) {
-  width: 72%;
+  width: 76%;
 }
 
 .hero__market-lines span:nth-child(2) {
-  width: 88%;
+  width: 68%;
 }
 
 .hero__market-lines span:nth-child(3) {
-  width: 56%;
+  width: 84%;
+}
+
+.hero__market-lines span:nth-child(4) {
+  width: 58%;
+}
+
+.hero__market-lines span:nth-child(5) {
+  width: 72%;
+}
+
+.hero__market-lines span:nth-child(6) {
+  width: 48%;
 }
 
 .search-bar {
   display: grid;
-  grid-template-columns: minmax(180px, 1fr) minmax(180px, 1fr) 72px minmax(96px, 106px);
-  gap: 0;
+  gap: 12px;
   width: 100%;
-  max-width: 610px;
+  max-width: 760px;
+}
+
+.search-bar__primary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(110px, 126px);
+  gap: 0;
   border-radius: 20px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 14px 28px rgba(115, 61, 60, 0.12);
+  background: transparent;
+}
+
+.search-bar__filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .search-bar__field {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 74px;
-  padding: 12px 22px 10px;
+  min-height: 66px;
+  padding: 12px 16px 12px;
   background: rgba(255, 255, 255, 0.96);
-  border-right: 1px solid #d8c7bf;
   min-width: 0;
 }
 
-.search-bar__field--icon {
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  color: #cab5ae;
+.search-bar__primary .search-bar__field {
+  border-right: 1px solid #d8c7bf;
+  border-radius: 20px 0 0 20px;
+  box-shadow: 0 14px 28px rgba(115, 61, 60, 0.12);
+}
+
+.search-bar__filters .search-bar__field {
+  border-radius: 16px;
+  border: 1px solid rgba(216, 199, 191, 0.9);
+  box-shadow: 0 10px 18px rgba(115, 61, 60, 0.06);
+}
+
+.search-bar__field--search {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 48px;
 }
 
 .search-bar .button--primary {
   width: 100%;
   min-width: 0;
+  min-height: 66px;
+  align-self: stretch;
+  margin: 0;
   padding: 0 14px;
-  border-radius: 0;
+  border-radius: 0 20px 20px 0;
+}
+.search-bar .button--primary:hover {
+  transform: none;
 }
 
 .search-bar__label {
@@ -363,7 +381,25 @@ select {
   color: #7e4f53;
 }
 
+.search-bar__input {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 0.9rem;
+  color: #7e4f53;
+}
+
+.search-bar__input::placeholder {
+  color: #b18f8f;
+}
+
 .search-bar__icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 20px;
   height: 20px;
   color: #c7b0aa;
@@ -445,9 +481,9 @@ select {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 28px;
-  padding-bottom: 14px;
-  border-bottom: 2px solid #dfc6bf;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dfc6bf;
 }
 .section-heading h2 {
   margin: 0;
@@ -465,8 +501,8 @@ select {
   min-height: 38px;
   padding: 0 16px;
   border-radius: 999px;
-  background: rgba(122, 29, 43, 0.08);
-  border: 1px solid rgba(122, 29, 43, 0.14);
+  background: transparent;
+  border: 1px solid color-mix(in srgb, currentColor 68%, white 32%);
   font-family: "DM Sans", sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
@@ -481,8 +517,9 @@ select {
   line-height: 1;
 }
 .section-heading__link:hover {
-  background: rgba(122, 29, 43, 0.12);
-  border-color: rgba(122, 29, 43, 0.2);
+  background: #7a1d2b;
+  border-color: #7a1d2b;
+  color: #fff7f2;
   opacity: 1;
 }
 
@@ -692,7 +729,7 @@ select {
     flex-wrap: wrap;
   }
   .hero__inner {
-    min-height: 560px;
+    min-height: 600px;
   }
   .hero__marketplace {
     left: 0;
@@ -703,7 +740,7 @@ select {
 }
 @media (max-width: 760px) {
   .container {
-    width: min(100% - 28px, 1240px);
+    width: min(100% - 28px, 1320px);
   }
   .site-header__inner {
     gap: 20px;
@@ -719,7 +756,7 @@ select {
     font-size: 0.92rem;
   }
   .hero__inner {
-    min-height: 500px;
+    min-height: 540px;
   }
   .hero__marketplace {
     display: none;
@@ -732,16 +769,20 @@ select {
     font-size: 1rem;
   }
   .search-bar {
-    grid-template-columns: 1fr;
     max-width: 100%;
-    border-radius: 18px;
   }
-  .search-bar .button--primary {
-    border-radius: 0;
+  .search-bar__primary,
+  .search-bar__filters {
+    grid-template-columns: 1fr;
   }
-  .search-bar__field {
+  .search-bar__primary .search-bar__field {
     border-right: 0;
     border-bottom: 1px solid #dbc9c0;
+    border-radius: 18px 18px 0 0;
+  }
+  .search-bar .button--primary {
+    min-height: 66px;
+    border-radius: 0 0 18px 18px;
   }
   .hero__image {
     object-position: 68% center;
