@@ -30,8 +30,8 @@
         </nav>
 
         <div class="site-header__actions">
-          <a class="button button--ghost" href="#">Přihlásit se</a>
-          <a class="button button--ghost" href="#">Registrace</a>
+          <a class="button button--header-primary" href="#">Přihlásit se</a>
+          <a class="button button--secondary" href="#">Registrace</a>
         </div>
       </div>
     </header>
@@ -112,7 +112,6 @@
                 </div>
               </div>
               <div class="pet-card__footer">
-                <span>Detail</span>
                 <span class="pet-card__button">Detail</span>
               </div>
             </a>
@@ -130,7 +129,6 @@
                 </div>
               </div>
               <div class="pet-card__footer">
-                <span>Detail</span>
                 <span class="pet-card__button">Detail</span>
               </div>
             </a>
@@ -147,7 +145,6 @@
                 </div>
               </div>
               <div class="pet-card__footer">
-                <span>Detail</span>
                 <span class="pet-card__button">Detail</span>
               </div>
             </a>
@@ -164,10 +161,10 @@
                 </div>
               </div>
               <div class="pet-card__footer">
-                <span>Detail</span>
                 <span class="pet-card__button">Detail</span>
               </div>
             </a>
+
           </div>
         </div>
       </section>
@@ -232,5 +229,19 @@
       </div>
     </footer>
   </div>
+
+  <script>
+    (() => {
+      const header = document.querySelector(".site-header");
+      if (!header) return;
+
+      const syncHeader = () => {
+        header.classList.toggle("site-header--scrolled", window.scrollY > 8);
+      };
+
+      syncHeader();
+      window.addEventListener("scroll", syncHeader, { passive: true });
+    })();
+  </script>
 </body>
 </html>
