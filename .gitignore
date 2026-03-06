@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Local npm cache / logs
+.npm-cache/
+npm-debug.log*
+
+# Build output generated from SCSS
+assets/css/*.css
+assets/css/*.css.map
+
+# Environment / local config
+.env
+.env.*
+!.env.example
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo

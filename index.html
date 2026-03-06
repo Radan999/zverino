@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zverino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="#">
+          <span class="brand__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img">
+              <path d="M20 24c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zm24 0c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zM8 38c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zm48 0c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zM32 62C17.8 62 8 55.5 8 46.9 8 39 15.4 34 22.4 34c3.6 0 5.5 1.2 9.6 3.8 4.1-2.6 6-3.8 9.6-3.8C48.6 34 56 39 56 46.9 56 55.5 46.2 62 32 62z"/>
+            </svg>
+          </span>
+          <span class="brand__text">Zverino</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Hlavní navigace">
+          <a class="main-nav__link main-nav__link--active" href="#">Domů</a>
+          <a class="main-nav__link" href="#">Chovatelé</a>
+          <a class="main-nav__link" href="#">Nabídky</a>
+          <a class="main-nav__link" href="#">Kontakt</a>
+        </nav>
+
+        <div class="site-header__actions">
+          <a class="button button--ghost" href="#">Přihlásit se</a>
+          <a class="button button--ghost" href="#">Registrace</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img class="hero__image" src="images/hero-puppy.png" alt="" aria-hidden="true">
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <h1>Najděte svého nového čtyřnohého parťáka</h1>
+            <p>Inzertní portál s ověřenými chovateli psů a koček.</p>
+
+            <form class="search-bar" action="#" method="get">
+              <label class="search-bar__field">
+                <span class="search-bar__label">Plemeno</span>
+                <select>
+                  <option>Vyberte</option>
+                </select>
+              </label>
+
+              <label class="search-bar__field">
+                <span class="search-bar__label">Lokalita</span>
+                <select>
+                  <option>Celá ČR</option>
+                </select>
+              </label>
+
+              <div class="search-bar__field search-bar__field--icon" aria-hidden="true">
+                <span class="search-bar__icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M10.5 3a7.5 7.5 0 1 0 4.7 13.3l4.2 4.2 1.6-1.6-4.2-4.2A7.5 7.5 0 0 0 10.5 3zm0 2.2a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6z"/>
+                  </svg>
+                </span>
+              </div>
+
+              <button class="button button--primary" type="submit">Hledat</button>
+            </form>
+          </div>
+          <div class="hero__marketplace" aria-hidden="true">
+            <div class="hero__market-card hero__market-card--back"></div>
+            <div class="hero__market-card hero__market-card--front">
+              <div class="hero__market-thumb"></div>
+              <div class="hero__market-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="listing">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Aktuální inzeráty</h2>
+            <a class="section-heading__link" href="#">Zobrazit vše</a>
+          </div>
+
+          <div class="pet-grid">
+            <a class="pet-card" href="#">
+              <div class="pet-card__image">
+                <img class="pet-card__photo" src="images/hero-puppy.png" alt="Beagle štěňata">
+              </div>
+              <div class="pet-card__body">
+                <h3>Beagle štěňata</h3>
+                <div class="pet-card__meta">
+                  <span>Praha</span>
+                  <strong>8 000 Kč</strong>
+                </div>
+              </div>
+              <div class="pet-card__footer">
+                <span>Detail</span>
+                <span class="pet-card__button">Detail</span>
+              </div>
+            </a>
+
+            <a class="pet-card" href="#">
+              <div class="pet-card__image">
+                <img class="pet-card__photo" src="images/hero-puppy.png" alt="Zlatý retrívr">
+                <span class="pet-card__badge">Ověřený chovatel</span>
+              </div>
+              <div class="pet-card__body">
+                <h3>Zlatý retrívr</h3>
+                <div class="pet-card__meta">
+                  <span>Brno</span>
+                  <strong>10 000 Kč</strong>
+                </div>
+              </div>
+              <div class="pet-card__footer">
+                <span>Detail</span>
+                <span class="pet-card__button">Detail</span>
+              </div>
+            </a>
+
+            <a class="pet-card" href="#">
+              <div class="pet-card__image">
+                <img class="pet-card__photo" src="images/hero-puppy.png" alt="Francouzský buldoček">
+              </div>
+              <div class="pet-card__body">
+                <h3>Francouzský buldoček</h3>
+                <div class="pet-card__meta">
+                  <span>Ostrava</span>
+                  <strong>12 500 Kč</strong>
+                </div>
+              </div>
+              <div class="pet-card__footer">
+                <span>Detail</span>
+                <span class="pet-card__button">Detail</span>
+              </div>
+            </a>
+
+            <a class="pet-card" href="#">
+              <div class="pet-card__image">
+                <img class="pet-card__photo" src="images/hero-puppy.png" alt="Labrador štěně">
+              </div>
+              <div class="pet-card__body">
+                <h3>Labrador štěně</h3>
+                <div class="pet-card__meta">
+                  <span>Plzeň</span>
+                  <strong>11 500 Kč</strong>
+                </div>
+              </div>
+              <div class="pet-card__footer">
+                <span>Detail</span>
+                <span class="pet-card__button">Detail</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="promo">
+        <div class="container promo__grid">
+          <article class="promo-card promo-card--wine">
+            <div class="promo-card__icon">✿</div>
+            <h2>Ověření chovatelé pro psy a kočky</h2>
+            <p>Najděte prověřené chovatele s důrazem na původ i péči o mazlíčky.</p>
+            <a class="button button--pill" href="#">Seznam chovatelů</a>
+          </article>
+
+          <article class="promo-card promo-card--orange">
+            <div class="promo-card__icon">🐾</div>
+            <h2>Prohlédněte si aktuální nabídky</h2>
+            <p>Projděte si nové i doporučené inzeráty z celé republiky.</p>
+            <a class="button button--light" href="#">Nabídky k prodeji</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container features__grid">
+          <article class="feature-box">
+            <div class="feature-box__icon">♡</div>
+            <h3>Zdraví a péče mazlíčků</h3>
+          </article>
+
+          <article class="feature-box">
+            <div class="feature-box__icon">⌂</div>
+            <h3>Tipy pro chovatele</h3>
+          </article>
+
+          <article class="feature-box">
+            <div class="feature-box__icon">🐾</div>
+            <h3>Příběhy mazlíčků</h3>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <div class="site-footer__title">Zverino</div>
+          <p>Místo pro bezpečné hledání mazlíčků od ověřených chovatelů. Přehledně, důvěryhodně a bez zbytečného chaosu.</p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Patička">
+          <a href="#">Domů</a>
+          <a href="#">Chovatelé</a>
+          <a href="#">Nabídky</a>
+          <a href="#">Kontakt</a>
+        </nav>
+
+        <div class="site-footer__meta">
+          <span>info@zverino.cz</span>
+          <span>Praha, Česká republika</span>
+          <span>© 2026 Zverino</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

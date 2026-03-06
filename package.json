@@ -1,14 +1,24 @@
 {
-  "name": "ticketlive-frontend",
+  "name": "zverino",
   "version": "1.0.0",
-  "description": "",
+  "description": "Static landing page prototype for Zverino",
+  "main": "index.html",
   "scripts": {
-    "watch": "sass assets/scss/style.scss assets/css/style.css --watch",
-     "build": "del assets\\css\\style.css.map 2>nul & sass assets/scss/style.scss assets/css/style.css --style=compressed --no-source-map"
+    "build:css": "sass assets/scss/style.scss assets/css/style.css --style=expanded",
+    "watch:css": "sass --watch assets/scss/style.scss:assets/css/style.css --style=expanded"
   },
-  "author": "ticketlive.cz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Radan999/zverino.git"
+  },
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.94.2"
-  }
+    "sass": "latest"
+  },
+  "bugs": {
+    "url": "https://github.com/Radan999/zverino/issues"
+  },
+  "homepage": "https://github.com/Radan999/zverino#readme"
 }
