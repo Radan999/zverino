@@ -44,15 +44,84 @@ border-radius: 999px;
 .hero__image {
     left: unset;
     right: 236px;
-    top: 0;
+    top: 30px;
     height: 720px;
     width: auto;
 }
 .hero {
 background: #fff;
 }
+.hero__inner {
+  min-height: 620px;
+  align-items: center;
+}
+.hero__content {
+  max-width: 560px;
+  padding: 18px 0;
+}
+.hero__content h1 {
+  margin-bottom: 24px;
+
+}
 .hero__content p{
+  margin-bottom: 30px;
   color: #000;
+  font-size: 1.04rem;
+  line-height: 1.6;
+}
+.search-bar {
+  max-width: 100%;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(122, 29, 43, 0.08);
+  box-shadow: 0 22px 54px rgba(122, 29, 43, 0.1);
+}
+.search-bar__primary {
+  min-height: 60px;
+}
+.search-bar__field {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.search-bar__primary .search-bar__field {
+  border-radius: 18px 0 0 18px;
+  box-shadow: none;
+  background: rgba(250, 247, 245, 0.98);
+}
+.search-bar__filters {
+  gap: 12px;
+}
+.search-bar__filters .search-bar__field {
+  border: none !important;
+  min-height: 56px;
+  border-radius: 18px;
+  background: rgba(250, 247, 245, 0.98);
+  box-shadow: none;
+}
+.search-bar__label {
+  color: #7a1d2b;
+}
+.search-bar select,
+.search-bar__input,
+.search-bar__input::placeholder,
+.search-bar__icon {
+  color: #a98279;
+}
+.search-bar select {
+  border: none;
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+  appearance: none;
+}
+.brand__icon {
+
+    width: 46px;
+    height: 42px;
+
 }
   </style>
 </head>
@@ -62,9 +131,7 @@ background: #fff;
       <div class="container site-header__inner">
         <a class="brand" href="#">
           <span class="brand__icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" role="img">
-              <path d="M20 24c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zm24 0c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zM8 38c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zm48 0c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zM32 62C17.8 62 8 55.5 8 46.9 8 39 15.4 34 22.4 34c3.6 0 5.5 1.2 9.6 3.8 4.1-2.6 6-3.8 9.6-3.8C48.6 34 56 39 56 46.9 56 55.5 46.2 62 32 62z"/>
-            </svg>
+<img src="/images/logo.png">
           </span>
           <span class="brand__text">Zverino</span>
         </a>
