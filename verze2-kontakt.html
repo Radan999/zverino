@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zverino | Kontakt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#f5f3f2; --surface:#fff; --line:#e2d5d1; --primary:#8b2130; --heading:#7d1828; --muted:#a37d79; --shadow:0 24px 60px rgba(110,78,70,.12); }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"DM Sans",sans-serif; background:var(--bg); color:var(--primary); }
+    a { color:inherit; text-decoration:none; }
+    input, textarea { font:inherit; }
+    .container { width:min(1240px,calc(100% - 48px)); margin:0 auto; }
+    .site-header { position:sticky; top:0; z-index:20; background:rgba(255,255,255,.95); backdrop-filter:blur(14px); border-bottom:1px solid rgba(139,33,48,.08); }
+    .site-header__inner,.site-footer__inner { display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .site-header__inner { min-height:86px; }
+    .brand { display:inline-flex; align-items:center; gap:14px; font-size:2rem; font-weight:800; color:var(--primary); letter-spacing:-.04em; }
+    .brand svg { width:40px; height:40px; fill:currentColor; }
+    .main-nav,.header-actions { display:flex; align-items:center; gap:22px; }
+    .main-nav a { padding:8px 4px; border-bottom:2px solid transparent; font-size:1.02rem; font-weight:700; color:#9a4b58; }
+    .main-nav a.active,.main-nav a:hover { color:var(--primary); border-color:var(--primary); }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:0 22px; border-radius:14px; border:2px solid transparent; font-weight:700; }
+    .button--primary { background:var(--primary); color:#fff; }
+    .button--secondary { border-color:var(--primary); color:var(--primary); }
+    .hero { padding:58px 0 24px; }
+    .hero h1 { margin:0 0 16px; font-size:clamp(2.7rem,4.8vw,5rem); line-height:1.05; letter-spacing:-.06em; color:var(--heading); }
+    .hero p,.contact-item span,.site-footer p { margin:0; max-width:720px; color:var(--muted); line-height:1.55; }
+    .layout { display:grid; grid-template-columns:360px minmax(0,1fr); gap:24px; padding:18px 0 72px; }
+    .panel { padding:26px; border-radius:24px; background:#fff; box-shadow:var(--shadow); }
+    .panel h2 { margin:0 0 16px; font-size:1.7rem; color:var(--heading); letter-spacing:-.04em; }
+    .contact-item { padding:18px 0; border-top:1px solid var(--line); }
+    .contact-item:first-of-type { border-top:0; padding-top:0; }
+    .contact-item strong { display:block; margin-bottom:6px; }
+    .form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .field { display:flex; flex-direction:column; gap:8px; }
+    .field--full { grid-column:1 / -1; }
+    .field label { font-weight:700; color:var(--heading); }
+    .field input,.field textarea { width:100%; padding:16px 18px; border:1px solid var(--line); border-radius:18px; background:#fff; color:var(--primary); }
+    .field textarea { min-height:180px; resize:vertical; }
+    .site-footer { padding:26px 0 34px; border-top:1px solid rgba(139,33,48,.08); background:#fff; }
+    @media (max-width:980px) { .site-header__inner,.site-footer__inner { flex-direction:column; padding:18px 0; } .layout,.form-grid { grid-template-columns:1fr; } }
+    @media (max-width:720px) { .container { width:min(100% - 28px,1240px); } .brand { font-size:1.7rem; } .main-nav,.header-actions { flex-wrap:wrap; justify-content:center; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="verze2.html"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 24c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zm24 0c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zM8 38c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zm48 0c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zM32 62C17.8 62 8 55.5 8 46.9 8 39 15.4 34 22.4 34c3.6 0 5.5 1.2 9.6 3.8 4.1-2.6 6-3.8 9.6-3.8C48.6 34 56 39 56 46.9 56 55.5 46.2 62 32 62z"></path></svg><span>Zverino</span></a>
+      <nav class="main-nav" aria-label="Hlavní navigace">
+        <a href="verze2.html">Domů</a>
+        <a href="verze2-chovatele.html">Chovatelé</a>
+        <a href="verze2-nabidky.html">Nabídky</a>
+        <a class="active" href="verze2-kontakt.html">Kontakt</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button--primary" href="verze2-prihlaseni.html">Přihlásit se</a>
+        <a class="button button--secondary" href="verze2-registrace.html">Registrace</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Kontaktujte tým Zverino</h1>
+        <p>Samostatná kontaktová stránka v novém vizuálu. Všechno je lokálně přímo ve stránce přes <code>&lt;style&gt;</code>, takže existující CSS soubory zůstávají nedotčené.</p>
+      </div>
+    </section>
+    <section>
+      <div class="container layout">
+        <aside class="panel">
+          <h2>Kontaktní údaje</h2>
+          <div class="contact-item"><strong>E-mail</strong><span>info@zverino.cz</span></div>
+          <div class="contact-item"><strong>Telefon</strong><span>+420 777 555 111</span></div>
+          <div class="contact-item"><strong>Adresa</strong><span>Praha, Česká republika</span></div>
+        </aside>
+        <div class="panel">
+          <h2>Napište nám</h2>
+          <form class="form-grid">
+            <div class="field"><label for="name">Jméno</label><input id="name" type="text" placeholder="Vaše jméno"></div>
+            <div class="field"><label for="email">E-mail</label><input id="email" type="email" placeholder="vas@email.cz"></div>
+            <div class="field field--full"><label for="subject">Předmět</label><input id="subject" type="text" placeholder="S čím potřebujete pomoct"></div>
+            <div class="field field--full"><label for="message">Zpráva</label><textarea id="message" placeholder="Sem napište zprávu..."></textarea></div>
+            <div class="field field--full"><button class="button button--primary" type="submit">Odeslat zprávu</button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="brand" href="verze2.html"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 24c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zm24 0c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zM8 38c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zm48 0c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zM32 62C17.8 62 8 55.5 8 46.9 8 39 15.4 34 22.4 34c3.6 0 5.5 1.2 9.6 3.8 4.1-2.6 6-3.8 9.6-3.8C48.6 34 56 39 56 46.9 56 55.5 46.2 62 32 62z"></path></svg><span>Zverino</span></a>
+      <p>Kontakt v nové oddělené variantě.</p>
+    </div>
+  </footer>
+</body>
+</html>

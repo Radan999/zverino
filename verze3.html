@@ -8,10 +8,57 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .site-header--scrolled .main-nav__link {
+      color:#000;
+    }
+    .site-header--scrolled .button--header-primary {
+background: #df7032;
+    border-color: transparent;
+    color: #fff8f5;
+
+        border-radius: 999px;
+    }
+        .site-header--scrolled .button--secondary{
+
+         border-radius: 999px;
+    }
+    .search-bar__primary {
+          min-height: 58px;
+    }
+    .search-bar__field {
+      padding: 10px 16px;
+    }
+    .search-bar__primary .search-bar__field {
+    border-radius: 999px 0 0 999px;
+    }
+    .search-bar .button--primary {
+
+    border-radius: 0 999px 999px 0;
+}
+.search-bar__filters .search-bar__field 
+{
+border-radius: 999px;
+}
+
+.hero__image {
+    left: unset;
+    right: 236px;
+    top: 0;
+    height: 720px;
+    width: auto;
+}
+.hero {
+background: #fff;
+}
+.hero__content p{
+  color: #000;
+}
+  </style>
 </head>
 <body>
   <div class="page-shell">
-    <header class="site-header">
+    <header class="site-header site-header--scrolled">
       <div class="container site-header__inner">
         <a class="brand" href="#">
           <span class="brand__icon" aria-hidden="true">
@@ -38,8 +85,8 @@
 
     <main>
       <section class="hero">
-        <img class="hero__image" src="images/hero-puppy.png" alt="" aria-hidden="true">
-        <div class="hero__overlay" aria-hidden="true"></div>
+        <img class="hero__image" src="images/vyrez.png" alt="" aria-hidden="true">
+
         <div class="container hero__inner">
           <div class="hero__content">
             <h1>Najděte svého nového čtyřnohého parťáka</h1>
@@ -230,18 +277,7 @@
     </footer>
   </div>
 
-  <script>
-    (() => {
-      const header = document.querySelector(".site-header");
-      if (!header) return;
 
-      const syncHeader = () => {
-        header.classList.toggle("site-header--scrolled", window.scrollY > 8);
-      };
 
-      syncHeader();
-      window.addEventListener("scroll", syncHeader, { passive: true });
-    })();
-  </script>
 </body>
 </html>

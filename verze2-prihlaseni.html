@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zverino | Přihlášení</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#f5f3f2; --surface:#fff; --line:#e2d5d1; --primary:#8b2130; --primary-dark:#741826; --muted:#a37d79; --heading:#7d1828; --shadow:0 24px 60px rgba(110,78,70,.12); }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"DM Sans",sans-serif; background:var(--bg); color:var(--primary); }
+    a { color:inherit; text-decoration:none; }
+    input { font:inherit; }
+    .container { width:min(1080px,calc(100% - 48px)); margin:0 auto; }
+    .site-header { padding:28px 0 0; }
+    .brand { display:inline-flex; align-items:center; gap:14px; font-size:2rem; font-weight:800; color:var(--primary); letter-spacing:-.04em; }
+    .brand svg { width:40px; height:40px; fill:currentColor; }
+    .auth { display:grid; grid-template-columns:minmax(0,1fr) 460px; gap:24px; align-items:stretch; padding:28px 0 54px; }
+    .auth-copy,.auth-card { border-radius:30px; background:#fff; box-shadow:var(--shadow); }
+    .auth-copy { padding:40px; display:flex; flex-direction:column; justify-content:space-between; }
+    .auth-copy h1 { margin:0 0 18px; font-size:clamp(2.7rem,4.8vw,4.8rem); line-height:1.05; letter-spacing:-.06em; color:var(--heading); }
+    .auth-copy p,.auth-card p,.auth-links { color:var(--muted); }
+    .auth-copy img { width:min(100%,420px); margin-top:28px; align-self:flex-end; }
+    .auth-card { padding:34px; }
+    .auth-card h2 { margin:0 0 10px; font-size:2rem; color:var(--heading); letter-spacing:-.04em; }
+    .field { display:flex; flex-direction:column; gap:8px; margin-bottom:16px; }
+    .field label { font-weight:700; color:var(--heading); }
+    .field input { width:100%; padding:15px 16px; border:1px solid var(--line); border-radius:18px; color:var(--primary); }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:48px; width:100%; border:0; border-radius:16px; background:var(--primary); color:#fff; font-weight:700; cursor:pointer; }
+    .button:hover { background:var(--primary-dark); }
+    .auth-links { display:flex; justify-content:space-between; gap:16px; margin-top:18px; }
+    @media (max-width:900px) { .auth { grid-template-columns:1fr; } }
+    @media (max-width:720px) { .container { width:min(100% - 28px,1080px); } .brand { font-size:1.7rem; } .auth-copy,.auth-card { padding:28px; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="verze2.html"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 24c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zm24 0c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zM8 38c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zm48 0c-4.4 0-8-4.9-8-11s3.6-11 8-11 8 4.9 8 11-3.6 11-8 11zM32 62C17.8 62 8 55.5 8 46.9 8 39 15.4 34 22.4 34c3.6 0 5.5 1.2 9.6 3.8 4.1-2.6 6-3.8 9.6-3.8C48.6 34 56 39 56 46.9 56 55.5 46.2 62 32 62z"></path></svg><span>Zverino</span></a>
+    </div>
+  </header>
+  <main>
+    <div class="container auth">
+      <section class="auth-copy">
+        <div>
+          <h1>Vítejte zpět</h1>
+          <p>Přihlášení pro chovatele i zájemce jsme oddělili do nové verze stránky. Vizuál navazuje na reference a používá výhradně inline stylování.</p>
+        </div>
+        <img src="images/vyrez.png" alt="Štěňata">
+      </section>
+      <section class="auth-card">
+        <h2>Přihlášení</h2>
+        <p>Zadejte své přístupové údaje.</p>
+        <form>
+          <div class="field"><label for="login-email">E-mail</label><input id="login-email" type="email" placeholder="vas@email.cz"></div>
+          <div class="field"><label for="login-password">Heslo</label><input id="login-password" type="password" placeholder="••••••••"></div>
+          <button class="button" type="submit">Přihlásit se</button>
+        </form>
+        <div class="auth-links"><a href="verze2-registrace.html">Vytvořit účet</a><a href="verze2.html">Zpět na domů</a></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
