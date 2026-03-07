@@ -113,18 +113,18 @@ select {
 
 .button--header-primary {
   min-height: 42px;
-  padding: 0 16px;
+  padding: 0 24px;
   border-radius: 12px;
-  background: rgba(164, 93, 107, 0.34);
+  background: #fff;
   border: 1px solid rgba(255, 255, 255, 0.02);
-  color: #fff8f5;
+  color: #5f1b27;
   box-shadow: none;
   transition: background-color 0.28s ease, border-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
 }
 
 .button--secondary {
   min-height: 42px;
-  padding: 0 16px;
+  padding: 0 24px;
   border-radius: 12px;
   background: transparent;
   border: 2px solid rgba(255, 247, 242, 0.72);
@@ -309,7 +309,7 @@ select {
 .hero__content {
   position: relative;
   z-index: 2;
-  max-width: 560px;
+  max-width: 534px;
   padding: 32px 0;
 }
 .hero__content h1 {
@@ -409,7 +409,7 @@ select {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(110px, 126px);
   gap: 0;
-  min-height: 61px;
+  min-height: 58px;
   border-radius: 20px;
   background: transparent;
 }
@@ -424,14 +424,14 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 11px 16px;
+  padding: 10px 16px;
   background: rgba(255, 255, 255, 0.96);
   min-width: 0;
 }
 
 .search-bar__primary .search-bar__field {
   border-right: 1px solid #d8c7bf;
-  border-radius: 20px 0 0 20px;
+  border-radius: 18px 0 0 18px;
   box-shadow: 0 14px 28px rgba(115, 61, 60, 0.12);
 }
 
@@ -454,7 +454,7 @@ select {
   align-self: stretch;
   margin: 0;
   padding: 0 14px;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 18px 18px 0;
 }
 .search-bar .button--primary:hover {
   transform: none;
@@ -551,7 +551,6 @@ select {
   letter-spacing: -0.02em;
 }
 .promo-card p {
-  max-width: 430px;
   margin: 0 0 26px;
   font-size: 0.98rem;
   line-height: 1.35;
