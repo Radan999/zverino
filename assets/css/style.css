@@ -568,9 +568,15 @@ select {
 .promo-card--wine {
   background: radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.08), transparent 24%), linear-gradient(135deg, #611723 0%, #7a1d2b 100%);
 }
+.promo-card--wine::before {
+  background-image: url("../../images/paw.svg"), none, none, url("../../images/paw.svg");
+}
 
 .promo-card--orange {
   background: radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.08), transparent 22%), linear-gradient(135deg, #de6c2f 0%, #ef8d3f 100%);
+}
+.promo-card--orange::before {
+  background-image: url("../../images/paw.svg"), none, none, url("../../images/paw.svg");
 }
 
 .listing {
@@ -734,11 +740,11 @@ select {
 .feature-box {
   position: relative;
   overflow: hidden;
-  padding: 26px 24px 24px;
-  border-radius: 24px;
+  padding: 20px 22px 20px;
+  border-radius: 20px;
   background: rgba(255, 250, 247, 0.98);
-  border: 1px solid rgba(122, 29, 43, 0.12);
-  box-shadow: 0 24px 48px rgba(120, 91, 79, 0.12);
+  border: none;
+  box-shadow: 0 18px 34px rgba(120, 91, 79, 0.12);
   text-align: center;
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
@@ -751,24 +757,23 @@ select {
   opacity: 0.95;
 }
 .feature-box:hover {
-  transform: translateY(-4px);
-  border-color: rgba(122, 29, 43, 0.18);
-  box-shadow: 0 28px 56px rgba(120, 91, 79, 0.16);
+  transform: translateY(-3px);
+  box-shadow: 0 24px 42px rgba(120, 91, 79, 0.16);
 }
 .feature-box h3 {
   margin: 0;
-  padding-top: 18px;
+  padding-top: 12px;
   font-family: "DM Sans", sans-serif;
-  font-size: 1.42rem;
+  font-size: 1.28rem;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--color-text-dark);
 }
 .feature-box p {
-  margin: 12px 0 0;
-  font-size: 1rem;
-  line-height: 1.6;
+  margin: 10px 0 0;
+  font-size: 0.96rem;
+  line-height: 1.5;
   color: #000;
 }
 
@@ -776,21 +781,18 @@ select {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 88px;
-  height: 88px;
-  margin-bottom: 20px;
-  border-radius: 28px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 240, 229, 0.98) 100%);
-  border: 1px solid rgba(239, 138, 59, 0.18);
+  width: auto;
+  height: auto;
+  margin-bottom: 10px;
   box-shadow: none;
-  font-size: 3.2rem;
+  font-size: 3.8rem;
   line-height: 1;
   color: var(--color-accent);
 }
 
 .site-footer {
   padding: 42px 0 30px;
-  background: linear-gradient(135deg, rgba(97, 23, 35, 0.98) 0%, rgba(122, 29, 43, 0.98) 48%, rgba(86, 20, 31, 0.98) 100%);
+  background: linear-gradient(135deg, rgba(101, 23, 37, 0.98) 0%, rgba(122, 29, 43, 0.98) 52%, rgba(90, 20, 33, 0.98) 100%);
   color: #fff7f2;
 }
 
