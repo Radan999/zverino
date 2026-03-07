@@ -127,7 +127,7 @@ select {
 .button--header-primary {
   min-height: 42px;
   padding: 0 24px;
-  border-radius: 12px;
+  border-radius: 999px;
   background:#fff;
   border: 1px solid rgba(255, 255, 255, 0.02);
  color: #5f1b27;
@@ -138,7 +138,7 @@ select {
 .button--secondary {
   min-height: 42px;
   padding: 0 24px;
-  border-radius: 12px;
+  border-radius: 999px;
   background: transparent;
   border: 2px solid rgba(255, 247, 242, 0.72);
   color: #fff7f2;
@@ -435,7 +435,7 @@ display: none;
   display: grid;
   gap: 12px;
   width: 100%;
-  max-width: 760px;
+
 }
 
 .search-bar__primary {
@@ -538,7 +538,7 @@ display: none;
 }
 
 .promo {
-  padding: 42px 0 52px;
+  padding: 18px 0 52px;
   background: transparent !important;
 }
 
@@ -718,8 +718,35 @@ display: none;
   gap: 26px;
 }
 
+.listing__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+
+  .section-heading__link {
+    min-height: 46px;
+    padding: 0 22px;
+    background: linear-gradient(180deg, #e67c3b 0%, #d9662b 100%);
+    border-color: transparent;
+    color: #fff7f2;
+    box-shadow: 0 12px 24px rgba(223, 112, 50, 0.22);
+
+    &::after {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      background: linear-gradient(180deg, #df7032 0%, #cb5b20 100%);
+      border-color: transparent;
+      color: #fff7f2;
+    }
+  }
+}
+
 .pet-card {
   display: block;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border-radius: 16px;
   background: #fff;
@@ -747,6 +774,27 @@ display: none;
   display: block;
 }
 
+.pet-card__stamp {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(255, 250, 246, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 6px 14px rgba(71, 41, 24, 0.1);
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #6b514b;
+}
+
 .pet-card__badge {
   position: absolute;
   left: 18px;
@@ -765,6 +813,10 @@ display: none;
 
 .pet-card__body {
   padding: 18px 22px 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 138px;
 
   h3 {
     margin: 0 0 10px;
@@ -774,6 +826,71 @@ display: none;
     letter-spacing: -0.02em;
     color: $text-dark;
   }
+}
+
+.pet-card__litter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  margin-bottom: 8px;
+}
+
+.pet-card__age {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  font-size: 0.88rem;
+  line-height: 1;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  color: #8a6d68;
+  padding-left: 4px;
+}
+
+.pet-card__count {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+  gap: 6px;
+}
+
+.pet-card__sex-icon {
+  display: inline-flex;
+  width: 14px;
+  height: 14px;
+  line-height: 1;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2.1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+.pet-card__sex-value {
+  display: inline-block;
+  min-width: 0.6em;
+}
+
+.pet-card__count--male {
+  background: #eef2ff;
+  color: #4b5bc4;
+}
+
+.pet-card__count--female {
+  background: #fff0f4;
+  color: #b14a6a;
 }
 
 .pet-card__meta {
@@ -794,8 +911,37 @@ display: none;
 
 .pet-card__footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 11px 18px;
   border-top: 1px solid $line;
+}
+
+.pet-card__verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #7a6a67;
+}
+
+.pet-card__verified-icon {
+  display: inline-flex;
+  width: 17px;
+  height: 17px;
+  color: #7c9a49;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 }
 
 .pet-card__button {
@@ -884,7 +1030,10 @@ display: none;
 .site-footer {
   padding: 42px 0 30px;
   background:
+    // Alternative:
+  
     linear-gradient(135deg, rgba(101, 23, 37, 0.98) 0%, rgba(122, 29, 43, 0.98) 52%, rgba(90, 20, 33, 0.98) 100%);
+     background: linear-gradient(135deg, rgba(63, 28, 28, 0.99) 0%, rgba(88, 36, 33, 0.99) 52%, rgba(55, 24, 24, 0.99) 100%);
   color: #fff7f2;
 }
 
