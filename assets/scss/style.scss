@@ -38,7 +38,7 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  background: linear-gradient(180deg, #f7f1ec 0%, #f1e7df 100%);
+  background: #f9f4f1;
   color: $text;
 }
 
@@ -539,7 +539,7 @@ display: none;
 
 .promo {
   padding: 42px 0 52px;
-  background: #f1ece7;
+  background: transparent !important;
 }
 
 .promo__grid {
@@ -551,7 +551,7 @@ display: none;
 .promo-card {
   position: relative;
   overflow: hidden;
-  padding: 32px 32px 34px;
+  padding: 32px 32px 42px;
   border-radius: 18px;
   color: #fffaf7;
   box-shadow: 0 14px 28px rgba(111, 55, 55, 0.1);
@@ -614,12 +614,26 @@ display: none;
   margin-bottom: 0;
   vertical-align: middle;
   font-size: 1.95rem;
+
+  svg {
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 }
 
 .promo-card--wine {
   background:
     radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.08), transparent 24%),
     linear-gradient(135deg, #611723 0%, #7a1d2b 100%);
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
 
   &::before {
     background-image:
@@ -800,7 +814,7 @@ display: none;
 
 .features {
   padding: 0 0 64px;
-  background: #f1e8e1;
+  background: transparent !important;
 }
 
 .features__grid {
@@ -837,10 +851,10 @@ display: none;
   }
 
   p {
-    margin: 10px 0 0;
-    font-size: 0.96rem;
-    line-height: 1.5;
-    color: #000;
+    margin: 12px 0 0;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: #7e5f5d;
   }
 }
 
@@ -855,6 +869,16 @@ display: none;
   font-size: 3.8rem;
   line-height: 1;
   color: $accent;
+
+  svg {
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 }
 
 .site-footer {
