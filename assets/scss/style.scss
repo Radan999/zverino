@@ -81,7 +81,7 @@ select {
   border-radius: 14px;
   border: 0;
   cursor: pointer;
-  font-weight: 800;
+  font-weight: 700;
   font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   letter-spacing: 0.01em;
@@ -93,15 +93,32 @@ select {
 }
 
 .button--primary {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background: linear-gradient(180deg, #e67c3b 0%, #d9662b 100%);
   color: #fff7f2;
   box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
-  transition-property: box-shadow, transform;
+  transition-property: transform;
   transition-duration: 0.22s;
   transition-timing-function: ease;
 
-  &:hover {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
     box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.34);
+    opacity: 0;
+    transition: opacity 0.22s ease;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
   }
 }
 
@@ -133,6 +150,10 @@ select {
  color: #5f1b27;
   box-shadow: none;
   transition: background-color 0.28s ease, border-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+
+  &:hover {
+    transform: none;
+  }
 }
 
 .button--secondary {
@@ -143,6 +164,10 @@ select {
   border: 2px solid rgba(255, 247, 242, 0.72);
   color: #fff7f2;
   transition: background-color 0.28s ease, border-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+
+  &:hover {
+    transform: none;
+  }
 }
 
 .site-header {
@@ -288,9 +313,9 @@ select {
   color: #fff8f5;
 
   &:hover {
-    background: transparent;
-    border-color: rgba(122, 29, 43, 0.28);
-    color: #7a1d2b;
+    background: #7a1d2b;
+    border-color: transparent;
+    color: #fff8f5;
   }
 }
 
@@ -340,7 +365,7 @@ select {
 .hero__content {
   position: relative;
   z-index: 2;
-  max-width: 534px;
+
   padding: 32px 0;
 
   h1 {
@@ -691,7 +716,7 @@ display: none;
   background: transparent;
   border: 1px solid color-mix(in srgb, currentColor 68%, white 32%);
   font-family: "DM Sans", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
   color: $accent;
   white-space: nowrap;
@@ -724,21 +749,40 @@ display: none;
   margin-top: 24px;
 
   .section-heading__link {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     min-height: 46px;
     padding: 0 22px;
     background: linear-gradient(180deg, #e67c3b 0%, #d9662b 100%);
     border-color: transparent;
     color: #fff7f2;
     box-shadow: 0 12px 24px rgba(223, 112, 50, 0.22);
+    transition: background-color 0.22s ease, border-color 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.34);
+      opacity: 0;
+      transition: opacity 0.22s ease;
+      pointer-events: none;
+      z-index: 0;
+    }
 
     &::after {
       margin-left: 10px;
     }
 
     &:hover {
-      background: linear-gradient(180deg, #df7032 0%, #cb5b20 100%);
       border-color: transparent;
       color: #fff7f2;
+
+      &::before {
+        opacity: 1;
+      }
     }
   }
 }
@@ -783,8 +827,8 @@ display: none;
   min-height: 28px;
   padding: 0 10px;
   border-radius: 999px;
-  background: rgba(255, 250, 246, 0.68);
-  border: 1px solid rgba(255, 255, 255, 0.42);
+  background: rgba(255, 250, 246, 0.75);
+
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 6px 14px rgba(71, 41, 24, 0.1);
@@ -821,7 +865,7 @@ display: none;
   h3 {
     margin: 0 0 10px;
     font-family: "DM Sans", sans-serif;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     line-height: 1.08;
     letter-spacing: -0.02em;
     color: $text-dark;

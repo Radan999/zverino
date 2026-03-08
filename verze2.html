@@ -16,8 +16,28 @@
 background: #df7032;
     border-color: transparent;
     color: #fff8f5;
-
-        border-radius: 999px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border-radius: 999px;
+    transition: background-color 0.22s ease, border-color 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
+    }
+    .site-header--scrolled .button--header-primary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.34);
+    opacity: 0;
+    transition: opacity 0.22s ease;
+    pointer-events: none;
+    z-index: 0;
+    }
+    .site-header--scrolled .button--header-primary:hover {
+    box-shadow: none;
+    }
+    .site-header--scrolled .button--header-primary:hover::before {
+    opacity: 1;
     }
         .site-header--scrolled .button--secondary{
 
@@ -39,6 +59,7 @@ background: #df7032;
     }
     .search-bar {
       gap: 8px;
+      max-width: 530px;
     }
     .search-bar__field {
       padding: 10px 22px;
@@ -105,8 +126,8 @@ opacity: 1;
 }
 .search-bar__facts {
   margin-top: 18px;
-  max-width: 385px;
-  padding: 14px 18px;
+  display: inline-flex;
+  padding: 16px 40px 16px 18px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.62);
@@ -162,6 +183,33 @@ opacity: 1;
 }
 .hero > .container > .listing__cta {
   display: none;
+}
+.site-footer__bottom {
+  width: min(100%, 340px);
+  margin: 18px auto 0;
+  padding-top: 10px;
+  text-align: center;
+  color: rgba(255, 248, 245, 0.74);
+  font-size: 0.82rem;
+}
+.site-footer__ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 340px);
+  margin: 26px auto 0;
+  color: rgba(255, 241, 235, 0.48);
+}
+.site-footer__ornament svg {
+  width: min(100%, 340px);
+  height: 26px;
+}
+.site-footer__ornament path {
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
 }
   </style>
 </head>
@@ -505,9 +553,15 @@ opacity: 1;
         <div class="site-footer__meta">
           <span>info@zverino.cz</span>
           <span>Praha, Česká republika</span>
-          <span>© 2026 Zverino</span>
         </div>
       </div>
+      <div class="container site-footer__ornament" aria-hidden="true">
+        <svg viewBox="0 0 340 26" role="presentation" focusable="false">
+          <path d="M8.5 13h95.5"/>
+          <path d="M104 13c12.8 0 18.2-7.2 24.6-7.2 7 0 9.6 8.8 18.4 8.8 8.4 0 10.6-9.2 22-9.2 11.4 0 13.6 9.2 22 9.2 8.8 0 11.4-8.8 18.4-8.8 6.4 0 11.8 7.2 24.6 7.2H331.5"/>
+        </svg>
+      </div>
+      <div class="container site-footer__bottom">© 2026 Zverino</div>
     </footer>
   </div>
 
