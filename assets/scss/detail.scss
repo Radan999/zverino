@@ -178,9 +178,34 @@
 .detail-summary__meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 16px;
   color: #8f6d68;
   font-size: 0.94rem;
+}
+
+.detail-summary__meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.detail-summary__meta-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: #b15a33;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 }
 
 .detail-summary__price {
@@ -189,6 +214,15 @@
   font-size: 2rem;
   font-weight: 800;
   color: #6d2d2e;
+}
+
+.detail-summary__card .pet-card__litter {
+  margin-top: 22px;
+  margin-bottom: 0;
+}
+
+.detail-summary__card .pet-card__age {
+  padding-left: 2px;
 }
 
 .detail-summary__cta,
@@ -216,13 +250,53 @@
   padding-top: 18px;
   border-top: 1px solid rgba(226, 208, 201, 0.88);
   color: #8b6663;
+}
 
-  a {
-    transition: color 0.2s ease;
+.detail-summary__actions-label {
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #b07c71;
+}
 
-    &:hover {
-      color: #6e3131;
-    }
+.detail-summary__share-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #fff6f0;
+  color: #8b6663;
+  border: 1px solid rgba(226, 208, 201, 0.88);
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+
+  &:hover {
+    color: #6e3131;
+    border-color: rgba(177, 90, 51, 0.35);
+    background: #fff1e8;
+  }
+}
+
+.detail-summary__share-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  color: #b15a33;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 }
 
@@ -287,6 +361,88 @@
   color: #85635f;
 }
 
+.breeder-card__fact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breeder-card__fact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: #b15a33;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+.breeder-card__about {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(226, 208, 201, 0.88);
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    list-style: none;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    color: #6e3131;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(45deg);
+      transition: transform 0.2s ease;
+      margin-top: -3px;
+      flex: 0 0 auto;
+    }
+  }
+
+  &[open] summary::after {
+    transform: rotate(225deg);
+    margin-top: 3px;
+  }
+}
+
+.breeder-card__about-copy {
+  padding-top: 14px;
+  color: #7d5c59;
+  line-height: 1.7;
+
+  p {
+    margin: 0 0 14px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    color: #6a2f30;
+  }
+}
+
 .detail-side-links {
   margin-top: 18px;
   padding-top: 18px;
@@ -341,6 +497,14 @@
   grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.78fr);
   gap: 26px;
   align-items: start;
+}
+
+.detail-related {
+  margin-top: 56px;
+}
+
+.detail-related .section-heading {
+  margin-bottom: 24px;
 }
 
 .detail-content {
@@ -415,6 +579,102 @@
   }
 }
 
+.detail-checklist {
+  background:
+    radial-gradient(circle at top right, rgba(255, 236, 224, 0.78), transparent 34%),
+    rgba(255, 250, 246, 0.92);
+}
+
+.detail-checklist__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-checklist__title-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 2px solid currentColor;
+  color: #b15a33;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+.detail-checklist__intro {
+  margin: 0 0 18px;
+  max-width: 62ch;
+  color: #866562;
+  line-height: 1.7;
+}
+
+.detail-checklist__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.detail-checklist__item {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(230, 209, 201, 0.92);
+}
+
+.detail-checklist__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #fff2e8 0%, #ffe7d6 100%);
+  color: #b15a33;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+.detail-checklist__content {
+  h3 {
+    margin: 2px 0 6px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.3;
+    color: #6f3031;
+  }
+
+  p {
+    margin: 0;
+    color: #856360;
+    line-height: 1.6;
+    font-size: 0.93rem;
+  }
+}
+
 .detail-inline-gallery,
 .detail-stacked-gallery {
   display: grid;
@@ -443,10 +703,7 @@
 }
 
 .detail-breeder-story {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.88fr);
-  gap: 22px;
-  align-items: start;
+  display: block;
 }
 
 .detail-stacked-gallery {
@@ -524,6 +781,10 @@
   }
 
   .detail-inline-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-checklist__list {
     grid-template-columns: 1fr;
   }
 }
