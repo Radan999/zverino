@@ -4,8 +4,8 @@
   "description": "Static landing page prototype for Zverino",
   "main": "index.html",
   "scripts": {
-    "build:css": "sass assets/scss/style.scss assets/css/style.css --style=expanded",
-    "watch:css": "sass --watch assets/scss/style.scss:assets/css/style.css --style=expanded"
+    "build:css": "sass assets/scss:assets/css --style=expanded",
+    "watch:css": "sass --watch assets/scss:assets/css --style=expanded"
   },
   "repository": {
     "type": "git",
