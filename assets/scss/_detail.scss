@@ -2,9 +2,6 @@
   background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.92) 0%, rgba(249, 243, 239, 0.92) 44%, rgba(246, 238, 233, 0.98) 100%);
 
   .site-header {
-    .main-nav__link {
-      color: #000;
-    }
 
     .site-header__actions .btn-primary {
       position: relative;
@@ -689,6 +686,7 @@
     grid-template-columns: 1fr;
   }
 }
+
 
 
 

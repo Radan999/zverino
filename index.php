@@ -1,51 +1,9 @@
-﻿<!DOCTYPE html>
-<html lang="cs">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Zverino</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/global.css">
-</head>
-<body>
-    <header class="site-header">
-      <div class="container site-header__inner">
-        <a class="brand" href="#">
-          <span class="brand__icon" aria-hidden="true">
-<img src="/images/logo.png">
-
-          </span>
-          <span class="brand__text">Zverino</span>
-        </a>
-
-        <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-header-menu" aria-label="Otevřít menu">
-          <span class="site-header__toggle-lines" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </button>
-
-        <div class="site-header__panel" id="site-header-menu">
-          <nav class="main-nav" aria-label="Hlavní navigace">
-            <a class="main-nav__link main-nav__link--active" href="#">Domů</a>
-            <a class="main-nav__link" href="#">Chovatelé</a>
-            <a class="main-nav__link" href="#">Nabídky</a>
-            <a class="main-nav__link" href="#">Kontakt</a>
-          </nav>
-
-          <div class="site-header__actions">
-            <a class="btn-primary" href="#">Přihlásit se</a>
-            <a class="btn-secondary btn-secondary--outline" href="#">Registrace</a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main>
+﻿<?php
+$pageTitle = 'Zverino';
+$activeNav = 'home';
+require __DIR__ . '/includes/header.php';
+?>
+<main>
       <section class="hero">
         <img class="hero__image" src="images/vyrez.png" alt="" aria-hidden="true">
   
@@ -330,48 +288,6 @@
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container site-footer__inner">
-        <div class="site-footer__brand">
-          <div class="site-footer__title">Zverino</div>
-          <p>Místo pro bezpečné hledání mazlíčků od ověřených chovatelů. Přehledně, důvěryhodně a bez zbytečného chaosu.</p>
-        </div>
-
-        <nav class="site-footer__nav" aria-label="Patička">
-          <a href="#">Domů</a>
-          <a href="#">Chovatelé</a>
-          <a href="#">Nabídky</a>
-          <a href="#">Kontakt</a>
-        </nav>
-
-        <div class="site-footer__meta">
-          <span>info@zverino.cz</span>
-          <span>Praha, Česká republika</span>
-        </div>
-      </div>
-      <div class="container site-footer__ornament" aria-hidden="true">
-        <svg viewBox="0 0 340 26" role="presentation" focusable="false">
-          <path d="M8.5 13h95.5"/>
-          <path d="M104 13c12.8 0 18.2-7.2 24.6-7.2 7 0 9.6 8.8 18.4 8.8 8.4 0 10.6-9.2 22-9.2 11.4 0 13.6 9.2 22 9.2 8.8 0 11.4-8.8 18.4-8.8 6.4 0 11.8 7.2 24.6 7.2H331.5"/>
-        </svg>
-      </div>
-      <div class="container site-footer__bottom">© 2026 Zverino</div>
-    </footer>
-  </div>
-
-
-
-  <script src="assets/js/header-menu.js"></script>`r`n</body>
-</html>
-
-
-
-
-
-
-
-
-
+<?php require __DIR__ . '/includes/footer.php'; ?>
 
 

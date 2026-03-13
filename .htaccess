@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteRule ^$ index.php [L]
+RewriteRule ^detail/?$ detail.php [L]
+
+RewriteRule ^verze3\.html$ / [R=301,L]
+RewriteRule ^detail-inzeratu\.html$ /detail [R=301,L]
+RewriteRule ^detail-inzeratu\.php$ /detail [R=301,L]
