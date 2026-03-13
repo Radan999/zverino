@@ -1,11 +1,11 @@
-{
+﻿{
   "name": "zverino",
   "version": "1.0.0",
   "description": "Static landing page prototype for Zverino",
   "main": "index.html",
   "scripts": {
-    "build:css": "sass assets/scss:assets/css --style=expanded",
-    "watch:css": "sass --watch assets/scss:assets/css --style=expanded"
+    "build:css": "sass assets/scss/index.scss assets/css/global.css --style=expanded",
+    "watch:css": "sass --watch assets/scss/index.scss:assets/css/global.css --style=expanded"
   },
   "repository": {
     "type": "git",
@@ -22,3 +22,5 @@
   },
   "homepage": "https://github.com/Radan999/zverino#readme"
 }
+
+

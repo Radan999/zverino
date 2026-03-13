@@ -1,0 +1,86 @@
+﻿.site-footer {
+  padding: 42px 0 30px;
+  background: linear-gradient(135deg, rgba(63, 28, 28, 0.99) 0%, rgba(88, 36, 33, 0.99) 52%, rgba(55, 24, 24, 0.99) 100%);
+  color: #fff7f2;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+  }
+
+  &__brand p {
+    max-width: 420px;
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: rgba(255, 247, 242, 0.8);
+  }
+
+  &__nav,
+  &__meta {
+    display: grid;
+    gap: 10px;
+  }
+
+  &__nav a,
+  &__meta span {
+    font-size: 0.95rem;
+    color: rgba(255, 247, 242, 0.84);
+  }
+
+  &__nav a:hover {
+    opacity: 0.72;
+  }
+
+  &__ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 340px);
+    margin: 26px auto 0;
+    color: rgba(255, 241, 235, 0.48);
+
+    svg {
+      width: min(100%, 340px);
+      height: 26px;
+    }
+
+    path {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+    }
+  }
+
+  &__bottom {
+    width: min(100%, 340px);
+    margin: 18px auto 0;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 0.82rem;
+    color: rgba(255, 248, 245, 0.74);
+  }
+}
+
+@media (max-width: 1080px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-footer {
+    padding-top: 34px;
+  }
+}
