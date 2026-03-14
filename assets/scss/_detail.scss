@@ -1,56 +1,14 @@
-﻿.detail-page {
+﻿.main--detail {
   background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.92) 0%, rgba(249, 243, 239, 0.92) 44%, rgba(246, 238, 233, 0.98) 100%);
-
-  .site-header {
-
-    .site-header__actions .btn-primary {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      border-radius: 999px;
-      background: #df7032;
-      color: #fff8f5;
-      transition: background-color 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
-
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.34);
-        opacity: 0;
-        transition: opacity 0.22s ease;
-        pointer-events: none;
-      }
-
-      &:hover {
-        background: #df7032;
-        color: #fff8f5;
-        box-shadow: none;
-      }
-
-      &:hover::before {
-        opacity: 1;
-      }
-    }
-
-    .btn-secondary--outline {
-      border-radius: 999px;
-    }
-  }
-
-  .site-footer {
-    &__ornament,
-    &__bottom {
-      width: min(100%, 340px);
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
 }
 
-.detail-main {
-  padding: 122px 0 72px;
+.main--detail ~ .site-footer {
+  .site-footer__ornament,
+  .site-footer__bottom {
+    width: min(100%, 340px);
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .breadcrumbs {
@@ -671,7 +629,7 @@
 }
 
 @media (max-width: 760px) {
-  .detail-main {
+  .main {
     padding-top: 154px;
   }
 
@@ -686,6 +644,7 @@
     grid-template-columns: 1fr;
   }
 }
+
 
 
 

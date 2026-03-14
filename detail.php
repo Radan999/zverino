@@ -1,10 +1,9 @@
 ﻿<?php
 $pageTitle = 'Zverino | Detail inzerátu';
-$bodyClass = 'detail-page';
 $activeNav = 'offers';
 require __DIR__ . '/includes/header.php';
 ?>
-<main class="detail-main">
+<main class="main main--detail">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Drobečková navigace">
           <a href="#">Domů</a>
@@ -386,5 +385,6 @@ require __DIR__ . '/includes/header.php';
       </div>
     </main>
 <?php require __DIR__ . '/includes/footer.php'; ?>
+
 
 

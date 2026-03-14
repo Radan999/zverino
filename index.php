@@ -3,9 +3,11 @@ $pageTitle = 'Zverino';
 $activeNav = 'home';
 require __DIR__ . '/includes/header.php';
 ?>
-<main>
+<main class="main main--hp">
       <section class="hero">
-        <img class="hero__image" src="images/vyrez.png" alt="" aria-hidden="true">
+        <div class="hero__media" aria-hidden="true">
+          <img class="hero__image" src="images/hero-2_old.jpg" alt="">
+        </div>
   
 
         <div class="container hero__inner">
@@ -48,11 +50,11 @@ require __DIR__ . '/includes/header.php';
                 <li>
                   <span><strong>312</strong> ověřených chovatelských stanic</span>
                 </li>
-                <span class="search-bar__facts-divider" aria-hidden="true">•</span>
+                <li class="search-bar__facts-divider" aria-hidden="true">•</li>
                 <li>
                   <span><strong>128</strong> inzerátů</span>
                 </li>
-                <span class="search-bar__facts-divider" aria-hidden="true">•</span>
+                <li class="search-bar__facts-divider" aria-hidden="true">•</li>
                 <li>
                   <span><strong>FCI</strong> průkaz chovatele</span>
                 </li>

@@ -136,10 +136,11 @@
   }
 
   &:hover {
-    transform: translateY(-1px);
     background: #7a1d2b;
     color: #fff8f5;
     box-shadow: none;
+    transform: none;
   }
 }
+
 
